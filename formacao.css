@@ -1,0 +1,91 @@
+.formacao{
+    background: #000000;
+    color: white;
+    padding: calc(120rem/16) calc(20rem/16);
+    position: relative;
+}
+.formacao-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: calc(100rem/16);
+}
+.formacao-container .subtitulo{
+    color: rgb(44, 33, 255);
+}
+.formacao-texto{
+    font-size: calc(24rem/16);
+color: rgb(60, 0, 255);
+
+
+}
+.formacao-texto strong{
+    color: blueviolet;
+}
+.formacao-coluna2{
+    display: grid;
+    gap: calc(60rem/16);
+}
+ .formacao-itens{
+    display: flex;
+  gap:calc(20rem/16);
+
+}
+ .formacao-itens li{
+    background: rgb(0, 0, 0);
+  display: grid;
+  gap:calc(20rem/16);
+  padding: 1rem;
+ }
+
+ a{
+    color: rgb(142, 44, 255);
+    text-decoration: none;
+ }
+ .tipo-lista{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+gap: calc(6rem/16);
+background-color: rgb(1, 1, 1);
+ }
+
+.formacao-container::after{
+content: "";
+display: block;
+width: 130px;
+height: 100px;
+background: url("..//img/detalhe.svg") no-repeat;
+position: absolute;
+bottom: -50px;
+}
+.tipo-lista h3{
+    padding-bottom: 15px;
+position: relative;
+
+}
+.tipo-lista h3::before{
+content: "";
+display: block;
+width: 4px;
+height: 20px;
+background: linear-gradient(rgb(158, 65, 245),rgb(98, 0, 255));
+position: absolute;
+left: -10px;
+}
+
+@media (max-width: 450px) {
+    .formacao-container {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .formacao-container {
+        grid-template-columns: 1fr;
+      }
+}
+@media (max-width: 800px) {
+    .tipo-lista {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+}
